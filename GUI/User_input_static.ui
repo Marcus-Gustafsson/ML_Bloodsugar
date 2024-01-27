@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>static_dialog</class>
+ <widget class="QDialog" name="static_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>616</width>
+    <height>286</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #2D2D30;
+    color: #CCCCCC;
+}
+
+QLabel, QCheckBox {
+    color: #D0D0D0;
+}
+
+QPushButton {
+    background-color: #0078D7; /* Adjust the color code to match the blue you desire */
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+}
+
+QPushButton:hover {
+    background-color: #005FA3;
+}
+
+QPushButton:pressed {
+    background-color: #003A70;
+}
+
+QPushButton:disabled {
+    background-color: #004C99;
+    color: #7F7F7F;
+}
+
+QLineEdit {
+    background-color: #2D2D30;
+    border: 1px solid #555;
+    border-radius: 2px;
+    color: #D0D0D0;
+    padding: 1px;
+}
+
+QRadioButton::indicator {
+    border: 1px solid #555;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #2D2D30;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #3A3A3C;
+    border: 1px solid #3A3A3C;
+}
+
+QRadioButton {
+    spacing: 5px;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #444;
+    height: 8px;
+    background: #2D2D30;
+    margin: 2px 0;
+}
+
+QSlider::handle:horizontal {
+    background: #3A3A3C;
+    border: 1px solid #5C5C5C;
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 9px;
+}
+
+QSlider::add-page:horizontal {
+    background: #555;
+}
+
+QSlider::sub-page:horizontal {
+    background: #3A3A3C;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QGroupBox" name="groupBox_user_name">
+        <property name="title">
+         <string>First name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="lineEdit_user_name"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_date_of_birth">
+        <property name="title">
+         <string>Date of birth</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QDateEdit" name="dateEdit_date_of_birth"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_weight">
+        <property name="title">
+         <string>Weight (kg)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="lineEdit_weight"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_insulin_type">
+        <property name="title">
+         <string>Insulin type</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QComboBox" name="comboBox_insulin_type">
+           <item>
+            <property name="text">
+             <string>Fiasp</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Novorapid</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_insulin_to_carb_ratio">
+        <property name="title">
+         <string>Insulin-to-carb ratio (grams)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="lineEdit_insulin_to_carb_ratio"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_blood_sugar_unit">
+        <property name="title">
+         <string>Blood sugar unit</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="checkBox_mmol_unit">
+           <property name="text">
+            <string>mmol/L</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBox_mg_dl_unit">
+           <property name="text">
+            <string>mg/dL</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox_ok_cancel">
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox_ok_cancel</sender>
+   <signal>accepted()</signal>
+   <receiver>static_dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox_ok_cancel</sender>
+   <signal>rejected()</signal>
+   <receiver>static_dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>704</width>
-    <height>614</height>
+    <width>679</width>
+    <height>615</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -102,7 +102,7 @@ QSlider::sub-page:horizontal {
       <property name="title">
        <string/>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLineEdit" name="lineEdit_app_title">
          <property name="text">
@@ -115,12 +115,29 @@ QSlider::sub-page:horizontal {
          <property name="title">
           <string/>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
+         <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QLineEdit" name="lineEdit_current_user">
-            <property name="text">
-             <string>Current user</string>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Current User</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <widget class="QComboBox" name="comboBox_current_user"/>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
@@ -154,8 +171,20 @@ QSlider::sub-page:horizontal {
          <property name="title">
           <string>Graphviewer</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QGroupBox" name="groupBox_latest_input">
+            <property name="title">
+             <string>Latest input</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="0" column="0">
+              <widget class="QLineEdit" name="lineEdit_latest_input"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
            <widget class="QGraphicsView" name="graphicsView_blood_insulin_graph"/>
           </item>
          </layout>
@@ -171,7 +200,7 @@ QSlider::sub-page:horizontal {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>704</width>
+     <width>679</width>
      <height>22</height>
     </rect>
    </property>

@@ -20,13 +20,13 @@ from PySide6.QtWidgets import (QAbstractButton, QApplication, QDialog, QDialogBu
     QPushButton, QSizePolicy, QTimeEdit, QVBoxLayout,
     QWidget)
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        if not Dialog.objectName():
-            Dialog.setObjectName(u"Dialog")
-        Dialog.resize(658, 517)
-        Dialog.setLayoutDirection(Qt.LeftToRight)
-        Dialog.setStyleSheet(u"QWidget {\n"
+class Ui_daily_dialog(object):
+    def setupUi(self, daily_dialog):
+        if not daily_dialog.objectName():
+            daily_dialog.setObjectName(u"daily_dialog")
+        daily_dialog.resize(658, 517)
+        daily_dialog.setLayoutDirection(Qt.LeftToRight)
+        daily_dialog.setStyleSheet(u"QWidget {\n"
 "    background-color: #2D2D30;\n"
 "    color: #CCCCCC;\n"
 "}\n"
@@ -107,9 +107,9 @@ class Ui_Dialog(object):
 "    background: #3A3A3C;\n"
 "}\n"
 "")
-        self.verticalLayout = QVBoxLayout(Dialog)
+        self.verticalLayout = QVBoxLayout(daily_dialog)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.groupBox = QGroupBox(Dialog)
+        self.groupBox = QGroupBox(daily_dialog)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setAlignment(Qt.AlignCenter)
         self.horizontalLayout = QHBoxLayout(self.groupBox)
@@ -132,7 +132,7 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.groupBox)
 
-        self.groupBox_2 = QGroupBox(Dialog)
+        self.groupBox_2 = QGroupBox(daily_dialog)
         self.groupBox_2.setObjectName(u"groupBox_2")
         self.groupBox_2.setAlignment(Qt.AlignCenter)
         self.horizontalLayout_2 = QHBoxLayout(self.groupBox_2)
@@ -155,7 +155,7 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.groupBox_2)
 
-        self.groupBox_3 = QGroupBox(Dialog)
+        self.groupBox_3 = QGroupBox(daily_dialog)
         self.groupBox_3.setObjectName(u"groupBox_3")
         self.groupBox_3.setAlignment(Qt.AlignCenter)
         self.horizontalLayout_3 = QHBoxLayout(self.groupBox_3)
@@ -178,7 +178,7 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.groupBox_3)
 
-        self.groupBox_4 = QGroupBox(Dialog)
+        self.groupBox_4 = QGroupBox(daily_dialog)
         self.groupBox_4.setObjectName(u"groupBox_4")
         self.groupBox_4.setAlignment(Qt.AlignCenter)
         self.horizontalLayout_4 = QHBoxLayout(self.groupBox_4)
@@ -206,7 +206,7 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.groupBox_4)
 
-        self.groupBox_5 = QGroupBox(Dialog)
+        self.groupBox_5 = QGroupBox(daily_dialog)
         self.groupBox_5.setObjectName(u"groupBox_5")
         self.groupBox_5.setAlignment(Qt.AlignCenter)
         self.horizontalLayout_5 = QHBoxLayout(self.groupBox_5)
@@ -266,7 +266,7 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.groupBox_5)
 
-        self.ok_cancel_button_box = QDialogButtonBox(Dialog)
+        self.ok_cancel_button_box = QDialogButtonBox(daily_dialog)
         self.ok_cancel_button_box.setObjectName(u"ok_cancel_button_box")
         self.ok_cancel_button_box.setLayoutDirection(Qt.LeftToRight)
         self.ok_cancel_button_box.setOrientation(Qt.Horizontal)
@@ -275,36 +275,36 @@ class Ui_Dialog(object):
         self.verticalLayout.addWidget(self.ok_cancel_button_box, 0, Qt.AlignHCenter)
 
 
-        self.retranslateUi(Dialog)
-        self.ok_cancel_button_box.accepted.connect(Dialog.accept)
-        self.ok_cancel_button_box.rejected.connect(Dialog.reject)
+        self.retranslateUi(daily_dialog)
+        self.ok_cancel_button_box.accepted.connect(daily_dialog.accept)
+        self.ok_cancel_button_box.rejected.connect(daily_dialog.reject)
 
-        QMetaObject.connectSlotsByName(Dialog)
+        QMetaObject.connectSlotsByName(daily_dialog)
     # setupUi
 
-    def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
-        self.groupBox.setTitle(QCoreApplication.translate("Dialog", u"Carb content", None))
-        self.pb_carb_low.setText(QCoreApplication.translate("Dialog", u"Low", None))
-        self.pb_carb_medium.setText(QCoreApplication.translate("Dialog", u"Medium", None))
-        self.pb_carb_high.setText(QCoreApplication.translate("Dialog", u"High", None))
-        self.groupBox_2.setTitle(QCoreApplication.translate("Dialog", u"Fat content", None))
-        self.pb_fat_low.setText(QCoreApplication.translate("Dialog", u"Low", None))
-        self.pb_fat_medium.setText(QCoreApplication.translate("Dialog", u"Medium", None))
-        self.pb_fat_high.setText(QCoreApplication.translate("Dialog", u"High", None))
-        self.groupBox_3.setTitle(QCoreApplication.translate("Dialog", u"Protein content", None))
-        self.pb_protein_low.setText(QCoreApplication.translate("Dialog", u"Low", None))
-        self.pb_protein_medium.setText(QCoreApplication.translate("Dialog", u"Medium", None))
-        self.pb_protein_high.setText(QCoreApplication.translate("Dialog", u"High", None))
-        self.groupBox_4.setTitle(QCoreApplication.translate("Dialog", u"Exercise intensity next 90 minutes", None))
-        self.pb_exercise_no.setText(QCoreApplication.translate("Dialog", u"No", None))
-        self.pb_exercise_light.setText(QCoreApplication.translate("Dialog", u"Light", None))
-        self.pb_exercise_medium.setText(QCoreApplication.translate("Dialog", u"Medium", None))
-        self.pb_exercise_high.setText(QCoreApplication.translate("Dialog", u"High", None))
-        self.groupBox_5.setTitle(QCoreApplication.translate("Dialog", u"Insulin and blood sugar", None))
-        self.groupBox_6.setTitle(QCoreApplication.translate("Dialog", u"Insulin dose (units)", None))
-        self.groupBox_7.setTitle(QCoreApplication.translate("Dialog", u"Time of dose", None))
-        self.groupBox_8.setTitle(QCoreApplication.translate("Dialog", u"Blood sugar reading", None))
-        self.groupBox_9.setTitle(QCoreApplication.translate("Dialog", u"Time of reading", None))
+    def retranslateUi(self, daily_dialog):
+        daily_dialog.setWindowTitle(QCoreApplication.translate("daily_dialog", u"Dialog", None))
+        self.groupBox.setTitle(QCoreApplication.translate("daily_dialog", u"Carb content", None))
+        self.pb_carb_low.setText(QCoreApplication.translate("daily_dialog", u"Low", None))
+        self.pb_carb_medium.setText(QCoreApplication.translate("daily_dialog", u"Medium", None))
+        self.pb_carb_high.setText(QCoreApplication.translate("daily_dialog", u"High", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("daily_dialog", u"Fat content", None))
+        self.pb_fat_low.setText(QCoreApplication.translate("daily_dialog", u"Low", None))
+        self.pb_fat_medium.setText(QCoreApplication.translate("daily_dialog", u"Medium", None))
+        self.pb_fat_high.setText(QCoreApplication.translate("daily_dialog", u"High", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("daily_dialog", u"Protein content", None))
+        self.pb_protein_low.setText(QCoreApplication.translate("daily_dialog", u"Low", None))
+        self.pb_protein_medium.setText(QCoreApplication.translate("daily_dialog", u"Medium", None))
+        self.pb_protein_high.setText(QCoreApplication.translate("daily_dialog", u"High", None))
+        self.groupBox_4.setTitle(QCoreApplication.translate("daily_dialog", u"Exercise intensity next 90 minutes", None))
+        self.pb_exercise_no.setText(QCoreApplication.translate("daily_dialog", u"No", None))
+        self.pb_exercise_light.setText(QCoreApplication.translate("daily_dialog", u"Light", None))
+        self.pb_exercise_medium.setText(QCoreApplication.translate("daily_dialog", u"Medium", None))
+        self.pb_exercise_high.setText(QCoreApplication.translate("daily_dialog", u"High", None))
+        self.groupBox_5.setTitle(QCoreApplication.translate("daily_dialog", u"Insulin and blood sugar", None))
+        self.groupBox_6.setTitle(QCoreApplication.translate("daily_dialog", u"Insulin dose (units)", None))
+        self.groupBox_7.setTitle(QCoreApplication.translate("daily_dialog", u"Time of dose", None))
+        self.groupBox_8.setTitle(QCoreApplication.translate("daily_dialog", u"Blood sugar reading", None))
+        self.groupBox_9.setTitle(QCoreApplication.translate("daily_dialog", u"Time of reading", None))
     # retranslateUi
 

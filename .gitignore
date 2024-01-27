@@ -1,2 +1,6 @@
 .venv
 blood_sugar_app.db
+GUI\Main_window.ui
+GUI\User_input_daily.ui
+GUI\User_input_static.ui
+__pycache__

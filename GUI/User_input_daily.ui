@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>daily_dialog</class>
+ <widget class="QDialog" name="daily_dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -330,7 +330,7 @@ QSlider::sub-page:horizontal {
   <connection>
    <sender>ok_cancel_button_box</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>daily_dialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -346,7 +346,7 @@ QSlider::sub-page:horizontal {
   <connection>
    <sender>ok_cancel_button_box</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>daily_dialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
