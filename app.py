@@ -142,6 +142,8 @@ class DailyValuesDialog(QDialog):
         # Debug print to verify the state of selected buttons
         print(f"DBG: Selected buttons before getting values: {self.selected_buttons}")
 
+        time_of_meal = self.ui.timeEdit_time_of_meal.time().toString()
+
         # Use the selected_buttons dictionary to get the content values
         carb_content = 'Low' if self.selected_buttons['carb'] == self.ui.pb_carb_low else 'Medium' if self.selected_buttons['carb'] == self.ui.pb_carb_medium else 'High'
         protein_content = 'Low' if self.selected_buttons['protein'] == self.ui.pb_protein_low else 'Medium' if self.selected_buttons['protein'] == self.ui.pb_protein_medium else 'High'
@@ -156,6 +158,7 @@ class DailyValuesDialog(QDialog):
         
         values = {
             'user_id': self.user_id,
+            'time_of_meal': time_of_meal,
             'carb_content': carb_content,
             'protein_content': protein_content,
             'fat_content': fat_content,
@@ -214,6 +217,7 @@ class BloodSugarApp(QMainWindow):
         # Format the output
         if latest_input:
             formatted_output = (
+                f"Meal time: {latest_input.get('time_of_meal', '')}, "
                 f"Last meal (Carb/Protein/Fat): {latest_input.get('carb_content', '')}/{latest_input.get('protein_content', '')}/{latest_input.get('fat_content', '')}, "
                 f"Exercise next 90min: {latest_input.get('exercise_intensity', '')}, "
                 f"insulin dose: {latest_input.get('insulin_dose', '')} units, "

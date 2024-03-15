@@ -26,6 +26,7 @@ class UserDailyInput:
 
     Attributes:
         user_id (int): The ID of the user to whom this daily input belongs.
+        time_of_meal (str): The time of the meal.
         fat_content (str): Fat content of the user's meal.
         protein_content (str): Protein content of the user's meal.
         carb_content (str): Carb content of the user's meal.
@@ -36,8 +37,9 @@ class UserDailyInput:
         blood_sugar_time (str): The time of the blood sugar reading.
     """
 
-    def __init__(self, user_id, carb_content, protein_content, fat_content, exercise_intensity, insulin_dose, insulin_time, blood_sugar, blood_sugar_time):
+    def __init__(self, user_id, time_of_meal, carb_content, protein_content, fat_content, exercise_intensity, insulin_dose, insulin_time, blood_sugar, blood_sugar_time):
         self.user_id = user_id
+        self.time_of_meal = time_of_meal
         self.carb_content = carb_content
         self.protein_content = protein_content
         self.fat_content = fat_content

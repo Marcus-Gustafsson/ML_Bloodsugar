@@ -17,8 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QAbstractButton, QApplication, QDialog, QDialogButtonBox,
     QGridLayout, QGroupBox, QHBoxLayout, QLineEdit,
-    QPushButton, QSizePolicy, QTimeEdit, QVBoxLayout,
-    QWidget)
+    QPushButton, QSizePolicy, QSpacerItem, QTimeEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_daily_dialog(object):
     def setupUi(self, daily_dialog):
@@ -109,6 +109,29 @@ class Ui_daily_dialog(object):
 "")
         self.verticalLayout = QVBoxLayout(daily_dialog)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.groupBox_time_of_meal = QGroupBox(daily_dialog)
+        self.groupBox_time_of_meal.setObjectName(u"groupBox_time_of_meal")
+        self.groupBox_time_of_meal.setAlignment(Qt.AlignCenter)
+        self.gridLayout_5 = QGridLayout(self.groupBox_time_of_meal)
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.timeEdit_time_of_meal = QTimeEdit(self.groupBox_time_of_meal)
+        self.timeEdit_time_of_meal.setObjectName(u"timeEdit_time_of_meal")
+        self.timeEdit_time_of_meal.setCalendarPopup(False)
+        self.timeEdit_time_of_meal.setTimeSpec(Qt.LocalTime)
+
+        self.gridLayout_5.addWidget(self.timeEdit_time_of_meal, 0, 1, 1, 1)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_5.addItem(self.horizontalSpacer, 0, 0, 1, 1)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_5.addItem(self.horizontalSpacer_2, 0, 2, 1, 1)
+
+
+        self.verticalLayout.addWidget(self.groupBox_time_of_meal)
+
         self.groupBox = QGroupBox(daily_dialog)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setAlignment(Qt.AlignCenter)
@@ -231,6 +254,7 @@ class Ui_daily_dialog(object):
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.timeEdit_time_of_insulin = QTimeEdit(self.groupBox_7)
         self.timeEdit_time_of_insulin.setObjectName(u"timeEdit_time_of_insulin")
+        self.timeEdit_time_of_insulin.setTimeSpec(Qt.LocalTime)
 
         self.gridLayout_2.addWidget(self.timeEdit_time_of_insulin, 0, 0, 1, 1)
 
@@ -257,6 +281,7 @@ class Ui_daily_dialog(object):
         self.gridLayout_4.setObjectName(u"gridLayout_4")
         self.timeEdit_blood_sugar = QTimeEdit(self.groupBox_9)
         self.timeEdit_blood_sugar.setObjectName(u"timeEdit_blood_sugar")
+        self.timeEdit_blood_sugar.setTimeSpec(Qt.LocalTime)
 
         self.gridLayout_4.addWidget(self.timeEdit_blood_sugar, 0, 0, 1, 1)
 
@@ -271,8 +296,9 @@ class Ui_daily_dialog(object):
         self.ok_cancel_button_box.setLayoutDirection(Qt.LeftToRight)
         self.ok_cancel_button_box.setOrientation(Qt.Horizontal)
         self.ok_cancel_button_box.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
+        self.ok_cancel_button_box.setCenterButtons(True)
 
-        self.verticalLayout.addWidget(self.ok_cancel_button_box, 0, Qt.AlignHCenter)
+        self.verticalLayout.addWidget(self.ok_cancel_button_box)
 
 
         self.retranslateUi(daily_dialog)
@@ -284,6 +310,7 @@ class Ui_daily_dialog(object):
 
     def retranslateUi(self, daily_dialog):
         daily_dialog.setWindowTitle(QCoreApplication.translate("daily_dialog", u"Dialog", None))
+        self.groupBox_time_of_meal.setTitle(QCoreApplication.translate("daily_dialog", u"Time of meal", None))
         self.groupBox.setTitle(QCoreApplication.translate("daily_dialog", u"Carb content", None))
         self.pb_carb_low.setText(QCoreApplication.translate("daily_dialog", u"Low", None))
         self.pb_carb_medium.setText(QCoreApplication.translate("daily_dialog", u"Medium", None))

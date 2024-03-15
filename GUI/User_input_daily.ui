@@ -100,6 +100,54 @@ QSlider::sub-page:horizontal {
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
+    <widget class="QGroupBox" name="groupBox_time_of_meal">
+     <property name="title">
+      <string>Time of meal</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="1">
+       <widget class="QTimeEdit" name="timeEdit_time_of_meal">
+        <property name="calendarPopup">
+         <bool>false</bool>
+        </property>
+        <property name="timeSpec">
+         <enum>Qt::LocalTime</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
       <string>Carb content</string>
@@ -272,7 +320,11 @@ QSlider::sub-page:horizontal {
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
-          <widget class="QTimeEdit" name="timeEdit_time_of_insulin"/>
+          <widget class="QTimeEdit" name="timeEdit_time_of_insulin">
+           <property name="timeSpec">
+            <enum>Qt::LocalTime</enum>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -302,7 +354,11 @@ QSlider::sub-page:horizontal {
         </property>
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
-          <widget class="QTimeEdit" name="timeEdit_blood_sugar"/>
+          <widget class="QTimeEdit" name="timeEdit_blood_sugar">
+           <property name="timeSpec">
+            <enum>Qt::LocalTime</enum>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -310,7 +366,7 @@ QSlider::sub-page:horizontal {
      </layout>
     </widget>
    </item>
-   <item alignment="Qt::AlignHCenter">
+   <item>
     <widget class="QDialogButtonBox" name="ok_cancel_button_box">
      <property name="layoutDirection">
       <enum>Qt::LeftToRight</enum>
@@ -320,6 +376,9 @@ QSlider::sub-page:horizontal {
      </property>
      <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
      </property>
     </widget>
    </item>

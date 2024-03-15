@@ -47,6 +47,7 @@ def setup_database():
             CREATE TABLE IF NOT EXISTS daily_inputs (
                 entry_id INTEGER PRIMARY KEY,
                 user_id INTEGER,
+                time_of_meal TEXT,
                 fat_content TEXT,
                 protein_content TEXT,
                 carb_content TEXT,
@@ -129,9 +130,9 @@ def insert_user_daily_input(user_daily_input):
     try:
         with DataBaseManager('blood_sugar_app.db') as cursor:
             cursor.execute('''
-                INSERT INTO daily_inputs (user_id, carb_content, protein_content, fat_content, exercise_intensity, insulin_dose, insulin_time, blood_sugar, blood_sugar_time)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (user_daily_input.user_id, user_daily_input.carb_content, user_daily_input.protein_content, user_daily_input.fat_content, user_daily_input.exercise_intensity, user_daily_input.insulin_dose, user_daily_input.insulin_time, user_daily_input.blood_sugar, user_daily_input.blood_sugar_time))
+                INSERT INTO daily_inputs (user_id, time_of_meal, carb_content, protein_content, fat_content, exercise_intensity, insulin_dose, insulin_time, blood_sugar, blood_sugar_time)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (user_daily_input.user_id, user_daily_input.time_of_meal, user_daily_input.carb_content, user_daily_input.protein_content, user_daily_input.fat_content, user_daily_input.exercise_intensity, user_daily_input.insulin_dose, user_daily_input.insulin_time, user_daily_input.blood_sugar, user_daily_input.blood_sugar_time))
         return True
     except sqlite3.Error as e:
         print(f"Database error: {e}")
